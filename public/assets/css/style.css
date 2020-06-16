@@ -1,0 +1,142 @@
+body {
+    font-family: Roboto,Noto,sans-serif;
+}
+
+.main-container {
+    margin: 10px 50px !important;
+}
+
+.title-container {
+    text-align: center !important;
+    margin-bottom: 40px !important;
+}
+
+.puppeteer-logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85px;
+    margin-top: 15px;
+}
+
+.title {
+    font-size: 40px;
+    line-height: 64px;
+    color: rgb(52, 58, 64);
+    font-family: Colfax, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.bs-callout {
+    padding: 15px;
+    margin: 20px 0;
+    border: 1px solid #eee;
+    border-left-width: 5px;
+    border-radius: 3px !important;
+    font-size: 14px;
+}
+
+.bs-callout-danger {
+    border-left-color: #ce4844;
+}
+
+.bs-callout a {
+    color: #ce4844 !important;
+}
+
+.bs-callout a:hover {
+    text-decoration: none !important;
+    color: #ce4844 !important;
+}
+
+.label {
+    font-weight: 550;
+    display: block;
+}
+
+.terminal {
+    position: relative;
+    width: 100%;
+    border-radius: 6px;
+    padding-top: 26px;
+    margin-top: 8px;
+    overflow: hidden;
+    border: 1px solid #eee;
+}
+
+.terminal::before {
+    content: "\2022 \2022 \2022";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 9px;
+    color: #c2c3c4;
+    width: 100%;
+    font-size: 2rem;
+    line-height: 0;
+    padding: 10px 0;
+    text-indent: 4px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+.terminal pre {
+    font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+    color: white;
+    padding: 0 1rem 1rem;
+    margin: 0;
+}
+
+code.language-js {
+    font-family: var(--monospace);
+    display: block;
+    padding: 16px;
+    overflow: auto;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f6f8fa;
+    border-radius: 3px;
+}
+
+.cm-keyword {
+    color: #708;
+}
+
+.cm-def {
+    color: #00f;
+}
+
+.cm-string {
+    color: #a11;
+}
+
+.code-keyword {
+    color: #a11 !important;
+    font-style: italic;
+    font-weight: 520;
+}
+
+code {
+    color: #000 !important;
+    line-height: 1.7 !important;
+}
+
+.btn.btn-default {
+    color: #24292e;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    padding: 3px 10px;
+    border: 1px solid rgba(27,31,35,.2);
+    border-radius: 3px;
+    background-image: linear-gradient(-180deg,#fafbfc,#eff3f6 90%);
+    margin-left: 4px;
+    font-weight: 600;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+}
+
+.btn.btn-default:hover, .btn.btn-default:focus {
+    box-shadow: none !important;
+    background-image: linear-gradient(-180deg,#f0f3f6,#e6ebf1 90%);
+    border-color: rgba(27,31,35,.35);
+    background-position: -.5em;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Global CSS -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Puppeteer</title>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="title-container">
+            <span class="title">Scraper le web avec Puppeteer</span>
+            <img class="puppeteer-logo" src="/assets/images/puppeteer.png" />
+        </div>
+        <div class="bs-callout bs-callout-danger" id="callout-inputgroup-text-input-only">
+            <span>
+                Puppeteer is a <a class="code-keyword" href="https://nodejs.org/fr/">Node</a> library which provides a high-level API to control Chrome or Chromium
+                over
+                the
+                <a class="code-keyword" href="https://chromedevtools.github.io/devtools-protocol/">DevTools Protocol <external-link-icon>
+                    </external-link-icon></a>.
+                Puppeteer runs <a class="code-keyword" href="https://developers.google.com/web/updates/2017/04/headless-chrome">headless
+                    <external-link-icon></external-link-icon></a> by default, but can be configured to run full
+                (non-headless) Chrome or Chromium
+            </span>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="block-def d-flex w-100 justify-content-between">
+                    <span class="label">Take a Screenshot</span>
+                    <button class="btn btn-default" id="screenshot-btn">Take Screenshot</button>
+                </div>
+                <div class="terminal">
+                    <code class="language-js"><span class="cm-keyword">const</span> <span class="cm-def">puppeteer</span> <span class="cm-operator">=</span> <span class="cm-variable">require</span>(<span class="cm-string">'puppeteer'</span>);<br><br>(<span class="cm-keyword">async</span> () <span class="cm-operator">=&gt;</span> {<br>  <span class="cm-keyword">const</span> <span class="cm-def">browser</span> <span class="cm-operator">=</span> <span class="cm-keyword">await</span> <span class="cm-variable">puppeteer</span>.<span class="cm-property">launch</span>();<br>  <span class="cm-keyword">const</span> <span class="cm-def">page</span> <span class="cm-operator">=</span> <span class="cm-keyword">await</span> <span class="cm-variable-2">browser</span>.<span class="cm-property">newPage</span>();<br>  <span class="cm-keyword">await</span> <span class="cm-variable-2">page</span>.<span class="cm-property">goto</span>(<span class="cm-string">'https://example.com'</span>);<br>  <span class="cm-keyword">await</span> <span class="cm-variable-2">page</span>.<span class="cm-property">screenshot</span>({<span class="cm-property">path</span>: <span class="cm-string">'example.png'</span>});<br><br>  <span class="cm-keyword">await</span> <span class="cm-variable-2">browser</span>.<span class="cm-property">close</span>();<br>})();<br></code>
+                </div>
+            </div>
+            <div class="col">
+                <div class="block-def d-flex w-100 justify-content-between">
+                    <span class="label">Download PDF File</span>
+                    <button class="btn btn-default" id="pdf-btn">Download PDF</button>
+                </div>
+                <div class="terminal">
+                    <code class="language-js"><span class="cm-keyword">const</span> <span class="cm-def">puppeteer</span> <span class="cm-operator">=</span> <span class="cm-variable">require</span>(<span class="cm-string">'puppeteer'</span>);<br><br>(<span class="cm-keyword">async</span> () <span class="cm-operator">=&gt;</span> {<br>  <span class="cm-keyword">const</span> <span class="cm-def">browser</span> <span class="cm-operator">=</span> <span class="cm-keyword">await</span> <span class="cm-variable">puppeteer</span>.<span class="cm-property">launch</span>();<br>  <span class="cm-keyword">const</span> <span class="cm-def">page</span> <span class="cm-operator">=</span> <span class="cm-keyword">await</span> <span class="cm-variable-2">browser</span>.<span class="cm-property">newPage</span>();<br>  <span class="cm-keyword">await</span> <span class="cm-variable-2">page</span>.<span class="cm-property">goto</span>(<span class="cm-string">'https://example.com'</span>, {<span class="cm-property">waitUntil</span>: <span class="cm-string">'networkidle2'</span>});<br>  <span class="cm-keyword">await</span> <span class="cm-variable-2">page</span>.<span class="cm-property">pdf</span>({<span class="cm-property">path</span>: <span class="cm-string">'example.pdf'</span>, <span class="cm-property">format</span>: <span class="cm-string">'A4'</span>});<br><br>  <span class="cm-keyword">await</span> <span class="cm-variable-2">browser</span>.<span class="cm-property">close</span>();<br>})();<br></code>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/assets/js/client.js"></script>
+</html>
